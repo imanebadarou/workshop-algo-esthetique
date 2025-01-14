@@ -6,42 +6,33 @@
   <meta name="charset" content="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="./style-web.css">
+  <link rel="stylesheet" href="../CSS/page1.css">
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="index.html" title="Retour à l'accueil du site">
+      <a href="page1.html" title="Retour à l'accueil du site">
         <img src="../IMAGES/palette.jpg" alt="Retour à l'accueil du site" />
       </a>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html">Le Web</a></li>
+        <li><a href="index.html">Annotate</a></li>
+        <li><a href="index.html">Explore</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <!-- <div id="main-content-web">
-      <h1>Le développement web front</h1>
-      <article>
-        <p><abbr title="HyperText Markup Language">HTML</abbr> sert à <strong>structurer une page web</strong> et son
-          contenu.</p>
-        <img src="images_projet_individuel_2024/logo_html.svg"
-          alt="Le logo de HTML5, composé d'un blason orange sur lequel est écrit le chiffre 5.">
-      </article>
-      <article>
-        <p><abbr title="Cacasding Style Sheet">CSS</abbr> sert à <strong>styliser</strong> le contenu d'une page web.
-        </p>
-        <img src="images_projet_individuel_2024/css_logo.svg"
-          alt="Le logo de CSS3, composé d'un blason orange sur lequel est écrit le chiffre 3.">
-      </article>
-      <article>
-        <p>Javascript sert à <strong>ajouter de l'interactivité</strong> dans une page web.</p>
-        <img src="images_projet_individuel_2024/js_logo.svg"
-          alt="Le logo Javascript, composé des lettre J et S écrite en noir sur un carré jaune.">
-      </article>
-    </div> -->
+    <div id="main-content-web">
+        <h1>Color Annotator</h1>
+        <img src="../IMAGES/palette.jpg"
+            alt="Palette composée de 4 couleurs">
+        <p>Which concepts best apply to this palette : </p>
+        <script src="../JS/page1.js"></script>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <p>Value: <span id="value"></span></p>
+        </div>
+
   </main>
   <footer>
     <div id="footer-content">
@@ -62,8 +53,4 @@
   </footer>
 </body>
 
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p>Value: <span id="value"></span></p>
-    </div>
 </html>
