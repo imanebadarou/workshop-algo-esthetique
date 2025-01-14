@@ -1,3 +1,5 @@
+let paletteid = 0;
+
 function palette(width, height){
   colorMode(HSB, 100);
   
@@ -17,8 +19,8 @@ function palette(width, height){
     widthRestant -= widthRdm;
     
     let hue = random(0, 100);
-    let sat = random(50, 100);
-    let light = random(30, 100);
+    let sat = random(20, 100);
+    let light = random(20, 100);
 
     let c1 = color(hue, sat, light);
     fill(c1);
@@ -35,7 +37,19 @@ function setup() {
   createCanvas(width, height);
   background(255);
   
-  palette(width, height);
+  generatepalette(width, height)
 
 }
 
+function generatepalette(width, height) {
+  for (let i = 0; i < 200; i++) {
+    palette(width, height);
+
+    let fileName = `palette_${nf(paletteid, 3)}.png`;
+    saveCanvas(fileName);
+
+    paletteid++;
+    clear();
+    background(255);
+  }
+}
