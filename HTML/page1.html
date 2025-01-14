@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../CSS/commun.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/page1.css">
-    <meta charset="utf-8" />
 
-  </head>
-  <body>
+<head>
+  <title>Workshop Esthetique Algo - page 1</title>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../CSS/page1.css">
+</head>
+
+<body>
+  <header>
     <nav>
-      <a href="">Annotate</a>
-      <a href="">Explore</a>
+      <a href="page1.html" title="Retour à l'accueil du site">
+        <img src="../IMAGES/palette.jpg" alt="Retour à l'accueil du site" />
+      </a>
+      <ul>
+        <li><a href="index.html">Annotate</a></li>
+        <li><a href="index.html">Explore</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Color Annotator</h1>
-      <div class="palette">
-
-        <p id="explication">Which concepts best apply to this palette : </p>
-        <div class="sliders">
-          <div class="slidecontainer">
-            <p>Cold</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <p>Warm</p>
-          </div>
-
-          <div class="slidecontainer">
-            <p>Silent</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <p>Noisy</p>
-          </div>
-
-          <div class="slidecontainer">
-            <p>Sugary</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <p>Bitter</p>
-          </div>
-
-          <div class="slidecontainer">
-            <p>Mild</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <p>Acid</p>
-          </div>
+  </header>
+  <main>
+    <div id="main-content-web">
+        <h1>Color Annotator</h1>
+        <img src="../IMAGES/palette.jpg"
+            alt="Palette composée de 4 couleurs">
+        <p>Which concepts best apply to this palette : </p>
+        <script src="../JS/page1.js"></script>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <p>Value: <span id="value"></span></p>
         </div>
+
+  </main>
+  <footer>
+    <div id="footer-content">
+
+      <p id="toute-ressemblance">Toute ressemblance avec des faits existants ou ayant existé serait purement fortuite.
+      </p>
+      <div id="en-savoir-plus-container">
+        <span>En savoir plus :</span>
+        <ul>
+          <li><a href="https://www.esiee.fr" target="_blank">site web de l'ESIEE Paris</a></li>
+          <li><a href="https://www.ingenieur-imac.fr/" target="_blank">site web officiel de la formation IMAC</a></li>
+          <li><a href="https://www.univ-gustave-eiffel.fr/" target="_blank">site web de l'Université Gustave Eiffel</a>
+          </li>
+        </ul>
       </div>
-    </main>
-    
-    <script src="../JS/slider.js"></script>
-  </body>
+      <p id="copyright">IMAC - 2024</p>
+    </div>
+  </footer>
+</body>
+
 </html>
