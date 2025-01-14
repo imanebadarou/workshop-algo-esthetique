@@ -6,8 +6,8 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 3%;
-    background-color: #2F2A85;
+    padding: 4%;
+    background-color: #2A2E4B;
 }
 nav a{
     color: white;

@@ -15,12 +15,36 @@
     </nav>
     <main>
       <h1>Color Annotator</h1>
+      <div class="palette">
+
+        <p id="explication">Which concepts best apply to this palette : </p>
+        <div class="sliders">
+          <div class="slidecontainer">
+            <p>Cold</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Warm</p>
+          </div>
+
+          <div class="slidecontainer">
+            <p>Silent</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Noisy</p>
+          </div>
+
+          <div class="slidecontainer">
+            <p>Sugary</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Bitter</p>
+          </div>
+
+          <div class="slidecontainer">
+            <p>Mild</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Acid</p>
+          </div>
+        </div>
+      </div>
     </main>
-    
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p>Value: <span id="value"></span></p>
-    </div>
     
     <script src="../JS/slider.js"></script>
   </body>
