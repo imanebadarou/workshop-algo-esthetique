@@ -57,7 +57,9 @@ img {
     border-radius: 10px;
     color:white;
     background-color:var(--focus-blue);
+    cursor: pointer;
 }
+
 
 .slider-container{
     margin-bottom: 5%;
