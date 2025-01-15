@@ -12,7 +12,7 @@ function palette(width, height){
     let widthRdm;
     
     if (i < nbRect - 1) {
-      widthRdm = random(50, widthRestant / (nbRect - i));
+      widthRdm = random(20, widthRestant / (nbRect - i));
     } else {
       widthRdm = widthRestant;
     }
