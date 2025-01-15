@@ -26,9 +26,19 @@
 
     contentCsv+="\nassocié à :\n ,H,S,L\n";
 
-    paletteValue.forEach((color) => {
-      contentCsv += ` ,${color.hue.toFixed(0)},${color.sat.toFixed(0)},${color.light.toFixed(0)}\n`;
+    colorPalette.forEach((color) => {
+      // Utiliser les fonctions de p5.js pour récupérer les composants HSB de la couleur
+      let h = hue(color);         // Récupérer la teinte (hue)
+      let s = saturation(color);  // Récupérer la saturation (sat)
+      let b = brightness(color);  // Récupérer la luminosité (light)
+    
+      // Ajouter les valeurs au CSV sous forme formatée
+      contentCsv += ` ,${h.toFixed(0)},${s.toFixed(0)},${b.toFixed(0)}\n`;
     });
+
+    // paletteValue.forEach((color) => {
+    //   contentCsv += ` ,${color.hue.toFixed(0)},${color.sat.toFixed(0)},${color.light.toFixed(0)}\n`;
+    // });
 
 
     const file = new Blob([contentCsv], { type: "text/csv" });

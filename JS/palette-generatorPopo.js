@@ -11,7 +11,7 @@ function palette(width, height){
     let light0 = random(30, 100); 
     let baseColor = color(hue0,sat0,light0);
 
-    let modeCouleurs = 0;
+    let modeCouleurs = 2;
   
     switch (modeCouleurs) {
         case 0:
