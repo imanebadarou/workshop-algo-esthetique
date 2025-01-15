@@ -16,23 +16,20 @@
         <img src="../IMG/LOGOS/palette.jpg" alt="Retour à l'accueil du site" />
       </a>
       <ul>
-        <li><a href="index.html">Annotate</a></li>
-        <li><a href="index.html">Explore</a></li>
+        <li><a href="page1.html">Color Annotator</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <div id="main-content-web">
       <div id="palette-container">
-        <h1>Color Annotator</h1>
-        <img src="../IMG/LOGOS/palette.jpg"
-            alt="Palette composée de 4 couleurs">
-        <div>
-      </div>
+        <h1>Palette</h1>
+        <div id="palette"></div>
+      
 
-      <div id="concepts-container">
+        <div id="concepts-container">
         <p>Which concepts best apply to this palette : </p>
-        <script src="../JS/page1.js"></script>
+        
 
         <div class="slider-container">
           <label>Cold</label>
@@ -41,21 +38,45 @@
         </div>
 
         <div class="slider-container">
-          <label>Cold</label>
-          <input type="range" id="coldWarm" min="0" max="100" value="50">
-          <label>Warm</label>
+          <label>Wet</label>
+          <input type="range" id="wetDry" min="0" max="100" value="50">
+          <label>Dry</label>
         </div>
 
         <div class="slider-container">
-          <label>Cold</label>
-          <input type="range" id="coldWarm" min="0" max="100" value="50">
-          <label>Warm</label>
+          <label>Passive</label>
+          <input type="range" id="passAct" min="0" max="100" value="50">
+          <label>Active</label>
         </div>
 
         <div class="slider-container">
-          <label>Cold</label>
-          <input type="range" id="coldWarm" min="0" max="100" value="50">
-          <label>Warm</label>
+          <label>Dull</label>
+          <input type="range" id="dullBright" min="0" max="100" value="50">
+          <label>Bright</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Sugary</label>
+          <input type="range" id="SugarBitter" min="0" max="100" value="50">
+          <label>Bitter</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Mild</label>
+          <input type="range" id="mildAcid" min="0" max="100" value="50">
+          <label>Acid</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Silent</label>
+          <input type="range" id="silentNoisy" min="0" max="100" value="50">
+          <label>Noisy</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Harsh</label>
+          <input type="range" id="harshHarmoni" min="0" max="100" value="50">
+          <label>Harmonious</label>
         </div>
         
         <button>Valider</button>
@@ -63,9 +84,8 @@
 
         
     </div>
-
-
   </main>
+
   <footer>
     <div id="footer-content">
 
@@ -83,6 +103,11 @@
       <p id="copyright">IMAC - 2024</p>
     </div>
   </footer>
+
+  <script src="../JS/p5.sound.min.js"></script>
+  <script src="../JS/p5.js"></script>
+  <script src="../JS/slider.js"></script>
+  <script src="../JS/palette-generator.js"></script>
 </body>
 
 </html>

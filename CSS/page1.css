@@ -7,7 +7,8 @@
 }
 
 #main-content-web h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
 img {
@@ -15,35 +16,51 @@ img {
 }
 
 @media screen and (min-width: 480px) {
-article img {
-    max-height: 256px;
+    article img {
+        max-height: 256px;
+    }
+
+    #main-content-web {
+        font-size: 1.6rem;
+    }
 }
 
-#main-content-web {
-    font-size: 1.6rem;
-}
-}
-
-#explication{
-    font-size: 3rem;
-    text-wrap:warp;
+#palette{
     display: flex;
     justify-content: center;
-    padding-left: 3%;
-    padding-right: 3%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
-.sliders{
+
+#concepts-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    align-self: center;
 }
-.slidecontainer{
+
+#palette-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    column-gap: 3%;
-    font-size: 3rem;
+}
+
+#palette-container p{
+    margin-bottom: 5%;
+}
+
+#palette-container button{
+    margin-top: 2vh;
+    font-family:"Louis George Cafe" ;
+    font-weight: bold;
+    padding: 2%;
+    font-size: 1rem;
+    border-radius: 10px;
+    color:white;
+    background-color:var(--focus-blue);
+}
+
+.slider-container{
+    margin-bottom: 5%;
 }
 
 
@@ -57,7 +74,7 @@ input[type="range"] {
   
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px;
+    width: 2.5vw;
     height:2.5vh;
     background: black;
     border-radius: 10px;

@@ -1,4 +1,5 @@
-let paletteid = 0;
+//let paletteid = 0;
+let paletteValue=[];
 
 function palette(width, height){
   colorMode(HSB, 100);
@@ -21,8 +22,8 @@ function palette(width, height){
     let hue = random(0, 100);
     let sat = random(20, 100);
     let light = random(20, 100);
-
     let c1 = color(hue, sat, light);
+    paletteValue.push({ hue: hue, sat: sat, light: light });
     fill(c1);
     noStroke();
     rect(x, 0, widthRdm, height);
@@ -32,12 +33,13 @@ function palette(width, height){
 }
 
 function setup() {
-  let width = 500;
-  let height =(500);
-  createCanvas(width, height);
+  let width = 250;
+  let height =250;
+  let canvas = createCanvas(width, height);
+  canvas.parent('palette');
   background(255);
   
-  generatepalette(width, height)
+  palette(width, height);
 
 }
 
