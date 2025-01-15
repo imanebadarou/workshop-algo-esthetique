@@ -24,6 +24,7 @@ function palette(width, height){
     let light = random(20, 100);
 
     let c1 = color(hue, sat, light);
+    paletteValue.push({ hue: hue, sat: sat, light: light });
     fill(c1);
     noStroke();
     rect(x, 0, widthRdm, height);
