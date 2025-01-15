@@ -2,7 +2,7 @@
 let paletteValue=[];
 
 function palette(width, height){
-  colorMode(HSB, 100);
+  colorMode(HSB, 360,100, 100);
   
   let nbRect = 4;
   let widthRestant = width;
@@ -19,11 +19,11 @@ function palette(width, height){
     
     widthRestant -= widthRdm;
     
-    let hue = random(0, 100);
+    let hue = random(0, 360);
     let sat = random(20, 100);
     let light = random(20, 100);
+
     let c1 = color(hue, sat, light);
-    paletteValue.push({ hue: hue, sat: sat, light: light });
     fill(c1);
     noStroke();
     rect(x, 0, widthRdm, height);
