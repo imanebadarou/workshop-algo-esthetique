@@ -13,7 +13,7 @@
   <header>
     <nav>
       <a href="page1.html" title="Retour à l'accueil du site">
-        <img src="../IMAGES/palette.jpg" alt="Retour à l'accueil du site" />
+        <img src="../IMG/LOGOS/palette.jpg" alt="Retour à l'accueil du site" />
       </a>
       <ul>
         <li><a href="index.html">Annotate</a></li>
@@ -23,15 +23,47 @@
   </header>
   <main>
     <div id="main-content-web">
+      <div id="palette-container">
         <h1>Color Annotator</h1>
-        <img src="../IMAGES/palette.jpg"
+        <img src="../IMG/LOGOS/palette.jpg"
             alt="Palette composée de 4 couleurs">
+        <div>
+      </div>
+
+      <div id="concepts-container">
         <p>Which concepts best apply to this palette : </p>
         <script src="../JS/page1.js"></script>
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <p>Value: <span id="value"></span></p>
+
+        <div class="slider-container">
+          <label>Cold</label>
+          <input type="range" id="coldWarm" min="0" max="100" value="50">
+          <label>Warm</label>
         </div>
+
+        <div class="slider-container">
+          <label>Cold</label>
+          <input type="range" id="coldWarm" min="0" max="100" value="50">
+          <label>Warm</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Cold</label>
+          <input type="range" id="coldWarm" min="0" max="100" value="50">
+          <label>Warm</label>
+        </div>
+
+        <div class="slider-container">
+          <label>Cold</label>
+          <input type="range" id="coldWarm" min="0" max="100" value="50">
+          <label>Warm</label>
+        </div>
+        
+        <button>Valider</button>
+      </div>
+
+        
+    </div>
+
 
   </main>
   <footer>
