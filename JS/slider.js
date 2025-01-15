@@ -27,8 +27,8 @@
     contentCsv+="\nassocié à :\n ,H,S,L\n";
 
     paletteValue.forEach((color) => {
-        contentCsv += ` ,${color.hue.toFixed(0)},${color.sat.toFixed(0)},${color.light.toFixed(0)}\n`;
-      });
+      contentCsv += ` ,${color.hue.toFixed(0)},${color.sat.toFixed(0)},${color.light.toFixed(0)}\n`;
+    });
 
 
     const file = new Blob([contentCsv], { type: "text/csv" });
