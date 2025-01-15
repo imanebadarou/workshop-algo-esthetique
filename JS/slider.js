@@ -36,6 +36,8 @@
     a.download = "slider-values.csv";
     a.href = URL.createObjectURL(file);
 
+    setup();
+
     a.click();
   });
 
