@@ -107,4 +107,30 @@ background: black;
 border-radius: 10px;
 cursor: pointer;
 }
+
+#color-mode-container{
+margin: 10px;
+font-size: 1.2rem;
+}
+
+#color-mode-container input {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+}
+
+input:checked {
+border: 6px solid black;
+}
   
