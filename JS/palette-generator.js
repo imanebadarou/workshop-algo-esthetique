@@ -37,7 +37,7 @@ function setup() {
   let width = 250;
   let height =250;
   let canvas = createCanvas(width, height);
-  canvas.parent('palette');
+  //canvas.parent('palette');
   background(255);
   
   palette(width, height);

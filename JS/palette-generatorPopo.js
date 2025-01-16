@@ -107,7 +107,8 @@ function generateAdjacentTriadic(baseColor) {
 function setup() {
   let width = 500;
   let height =500;
-  createCanvas(width, height);
+  let canvas = createCanvas(width, height);
+  canvas.parent('palette');
   background(255);
   colorMode(HSB, 360,100,100);
 
