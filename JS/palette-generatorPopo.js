@@ -1,11 +1,10 @@
 let paletteid = 0;
 let colorPalette=[];
 
-function palette(modeCouleur, width, height){  
+function palette(modeCouleur,modeForme, width, height){  
     colorPalette=[];
-    let nbRect = 4;
-    let widthRestant = width;
-    let x = 0;
+    
+    
 
     let hue0 = random(0, 360);
     let sat0 = random(50, 100);
@@ -14,7 +13,7 @@ function palette(modeCouleur, width, height){
   
     switch (modeCouleur) {
         case 0:
-          colorPalette = generateAdjacentTriadic(baseColor);
+          colorPalette = generateRandom();
         break;
         case 1:
             colorPalette = generateMonochromatic(baseColor);
@@ -33,6 +32,27 @@ function palette(modeCouleur, width, height){
         break;
       }
 
+      switch (modeForme) {
+        case 0:
+          colorPalette = generateRectRand(colorPalette);
+        break;
+        case 1:
+            colorPalette = generateRectNorm(colorPalette);
+        break;
+        case 2:
+            colorPalette = generateCarre(colorPalette);
+        break;
+      }
+
+      
+
+    }
+  
+  
+  function generateRectRand (colorPalette){
+    let x = 0;
+    let nbRect = 4;
+    let widthRestant = width;
     for (let i = 0; i < nbRect; i++) {
         let widthRdm;
         
@@ -43,14 +63,50 @@ function palette(modeCouleur, width, height){
         }
         
         widthRestant -= widthRdm;
-
+  
         fill(colorPalette[i]);
         noStroke();
         rect(x, 0, widthRdm, height);
-        
         x += widthRdm;
     }
 }
+
+function generateRectNorm (colorPalette){
+  let x = 0;
+  let nbRect = 4;
+  let widthRdm = width/nbRect;
+  for (let i = 0; i < nbRect; i++) {
+      fill(colorPalette[i]);
+      noStroke();
+      rect(x, 0, widthRdm, height);
+      x += widthRdm;
+  }
+}
+
+function generateCarre (colorPalette){
+  let x = 0;
+  let y = 0;
+  let nbRect = 4;
+  let widthRdm = width;
+  // let heightRdm = width;
+  for (let i = 0; i < nbRect; i++) {
+      fill(colorPalette[i]);
+      noStroke();
+      square(x, y, widthRdm,20);
+      widthRdm=widthRdm*0.75;
+      x = (width-widthRdm)/2;
+      y = (width-widthRdm)/2;
+  }
+}
+
+function generateRandom(){
+  let palette = [];
+  for (let i = 0; i < 4; i++) {
+    palette.push(color(random(0, 360), sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));
+  }
+  return palette;
+}
+
 
 function generateMonochromatic(baseColor) {
     let palette = [];
@@ -80,8 +136,8 @@ function generateTriadic(baseColor) {
     let basesat = saturation(baseColor);
     palette.push(color(baseHue, basesat, random(90, 100)));  // Ajout d'une couleur complémentaire
     palette.push(baseColor);
-    palette.push(color((baseHue + 135) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de 120° (triadique)
-    palette.push(color((baseHue + 225) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de 240° (triadique)
+    palette.push(color((baseHue + 135) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 120° (triadique)
+    palette.push(color((baseHue + 225) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 240° (triadique)
     return palette;
 }
 
@@ -89,9 +145,9 @@ function generateTetradic(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     palette.push(baseColor);
-    palette.push(color((baseHue + 45) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de 120° (triadique)
-    palette.push(color((baseHue + 180) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de 240° (triadique)
-    palette.push(color((baseHue + 180+45) % 360, random(50, 100), random(30, 100)));  // Ajout d'une couleur complémentaire
+    palette.push(color((baseHue + 45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 120° (triadique)
+    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 240° (triadique)
+    palette.push(color((baseHue + 180+45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Ajout d'une couleur complémentaire
     return palette;
 }
 
@@ -100,8 +156,8 @@ function generateAdjacentTriadic(baseColor) {
     let baseHue = hue(baseColor);
     palette.push(color(baseHue, random(10, 40), random(90, 100)));  // Ajout d'une quatrième couleur (plus éloignée)
     palette.push(baseColor);
-    palette.push(color((baseHue + 30) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de 30° (adjacente)
-    palette.push(color((baseHue - 30 + 360) % 360, random(50, 100), random(30, 100)));  // Couleur décalée de -30° (adjacente)
+    palette.push(color((baseHue + 30) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 30° (adjacente)
+    palette.push(color((baseHue - 30 + 360) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de -30° (adjacente)
     return palette;
 }
 
@@ -111,6 +167,7 @@ function setup() {
   let height = 450;
   let canvas = createCanvas(width, height);
   let modeCouleur=0;
+  let modeForme=0;
   canvas.parent('palette');
   background(255);
   colorMode(HSB, 360,100,100);
@@ -126,8 +183,16 @@ function setup() {
     }
   }
   console.log(modeCouleur);
+
+  const forms = document.getElementsByName('formes');
+  for(var i = 0; i < forms.length; i++){
+    if(forms[i].checked){
+      
+      modeForme = parseInt(forms[i].value);
+    }
+  }
   
-  palette(modeCouleur, width, height);
+  palette(modeCouleur, modeForme, width, height);
 //   generatepalette(width, height)
 
 }
