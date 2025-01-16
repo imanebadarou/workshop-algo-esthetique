@@ -58,7 +58,7 @@ function generateMonochromatic(baseColor) {
     for (let i = 0; i < 4; i++) {
       let saturationValue = 100 - (i * 25);  // Diminuer la saturation
       let brightnessValue = 100 - (i * 20);  // Diminuer la luminosité
-      palette.push(color({ hue:baseHue, sat:saturationValue, light:brightnessValue }));
+      palette.push(color(baseHue, saturationValue, brightnessValue ));
       
     }
     return palette;
@@ -110,7 +110,7 @@ function setup() {
   let width = 450;
   let height = 450;
   let canvas = createCanvas(width, height);
-  let modeCouleur=4;
+  let modeCouleur=0;
   canvas.parent('palette');
   background(255);
   colorMode(HSB, 360,100,100);
@@ -118,16 +118,14 @@ function setup() {
   // modeCouleur = document.querySelector("input[type='radio'][name=couleurs]:checked").value;
   // console.log(modeCouleur); 
 
-  // const colors = document.getElementsByName('couleurs');
-  // modeCouleur;
-  // for(var i = 0; i < colors.length; i++){
-  //     if(colors[i].checked){
-        
-  //       console.log(colors[i].value);
-  //       modeCouleur = colors[i].value;
-  //     }
-  //   }
-  //   console.log(modeCouleur);
+  const colors = document.getElementsByName('couleurs');
+  for(var i = 0; i < colors.length; i++){
+    if(colors[i].checked){
+      
+      modeCouleur = parseInt(colors[i].value);
+    }
+  }
+  console.log(modeCouleur);
   
   palette(modeCouleur, width, height);
 //   generatepalette(width, height)
