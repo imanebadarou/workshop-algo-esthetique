@@ -14,11 +14,11 @@ function setup() {
 
 }
 
-function draw() {
-  // Use the slider as a grayscale value.
-  let g = slider.value();
-  background(g);
-}
+// function draw() {
+//   // Use the slider as a grayscale value.
+//   let g = slider.value();
+//   background(g);
+// }
 
 let silentNoisyValue = 50;
 document.getElementById('silentNoisy').addEventListener('input', function (e) {
