@@ -11,12 +11,12 @@
       ];
 
 
-      let contentCsv = "Concept,Value\n";
+      let contentCsv = "Cold-Warm,Wet-Dry,Passive-Active,Dull-Bright,Sugary-Bitter,Mild-Acid,Silent-Noisy,Harsh-Harmonious,H1,S1,B1,H2,S2,B2,H3,S3,B3,H4,S4,B4\n";
       sliders.forEach(slider => {
-        contentCsv += `${slider.label},${slider.value}\n`;
+        contentCsv += `${slider.value},`;
       });
 
-      contentCsv+="\nassocié à :\n ,H,S,B\n";
+      //contentCsv+="\nassocié à :\n ,H,S,B\n";
 
       colorPalette.forEach((color) => {
         // Utiliser les fonctions de p5.js pour récupérer les composants HSB de la couleur
@@ -25,7 +25,7 @@
         let b = brightness(color);  // Récupérer la luminosité (light)
       
         // Ajouter les valeurs au CSV sous forme formatée
-        contentCsv += ` ,${h.toFixed(0)},${s.toFixed(0)},${b.toFixed(0)}\n`;
+        contentCsv += `${h.toFixed(0)},${s.toFixed(0)},${b.toFixed(0)},`;
       });
 
 
