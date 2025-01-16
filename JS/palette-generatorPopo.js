@@ -1,7 +1,7 @@
 let paletteid = 0;
 let colorPalette=[];
 
-function palette(width, height){  
+function palette(modeCouleur, width, height){  
     let nbRect = 4;
     let widthRestant = width;
     let x = 0;
@@ -10,10 +10,8 @@ function palette(width, height){
     let sat0 = random(50, 100);
     let light0 = random(30, 100); 
     let baseColor = color(hue0,sat0,light0);
-
-    let modeCouleurs = 2;
   
-    switch (modeCouleurs) {
+    switch (modeCouleur) {
         case 0:
             colorPalette = generateMonochromatic(baseColor);
           break;
@@ -66,9 +64,9 @@ function generateComplementary(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     palette.push(baseColor);
-    palette.push(color((baseHue + random(-20,20)) % 360, random(50, 100), random(30, 100)));  // Couleur complémentaire
-    palette.push(color((baseHue + 180) % 360, random(50, 100), random(30, 100)));   // Couleur complémentaire adjacente
-    palette.push(color((baseHue + 180 + random(-20,20)) % 360, random(30, 100), random(50, 100)));  // Autre couleur complémentaire adjacente
+    palette.push(color((baseHue + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur complémentaire
+    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));   // Couleur complémentaire adjacente
+    palette.push(color((baseHue + 180 + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Autre couleur complémentaire adjacente
     return palette;
 }
 
@@ -108,13 +106,15 @@ function setup() {
   let width = 400;
   let height = 400;
   let canvas = createCanvas(width, height);
+  let modeCouleur=4;
   canvas.parent('palette');
   background(255);
   colorMode(HSB, 360,100,100);
 
-
+  modeCouleur = document.querySelector("input[type='radio'][name=couleurs]:checked").value;
+  console.log(modeCouleur); 
   
-  palette(width, height);
+  palette(modeCouleur, width, height);
 //   generatepalette(width, height)
 
 }
