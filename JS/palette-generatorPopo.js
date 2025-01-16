@@ -1,4 +1,15 @@
-let paletteid = 0;
+function resetTousCurseurs() {
+  document.getElementById("coldWarm").value=50;
+  document.getElementById("wetDry").value=50;
+  document.getElementById("passAct").value=50;
+  document.getElementById("dullBright").value=50;
+  document.getElementById("SugarBitter").value=50;
+  document.getElementById("mildAcid").value=50;
+  document.getElementById("silentNoisy").value=50;
+  document.getElementById("harshHarmoni").value=50;
+}
+
+let paletteid = -1;
 let colorPalette=[];
 
 function palette(modeCouleur,modeForme, width, height){  
@@ -193,7 +204,12 @@ function setup() {
   }
   
   palette(modeCouleur, modeForme, width, height);
+  resetTousCurseurs();
 //   generatepalette(width, height)
+
+  paletteid++;
+  document.getElementById("cpt-palette").innerHTML=paletteid;
+
 
 }
 
