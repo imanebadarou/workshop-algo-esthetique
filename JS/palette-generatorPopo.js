@@ -9,7 +9,6 @@ function resetTousCurseurs() {
   document.getElementById("harshHarmoni").value=50;
 }
 
-let paletteid = -1;
 let colorPalette=[];
 
 function palette(modeCouleur, width, height){  
@@ -141,10 +140,6 @@ function setup() {
   palette(modeCouleur, width, height);
   resetTousCurseurs();
 //   generatepalette(width, height)
-
-  paletteid++;
-  document.getElementById("cpt-palette").innerHTML=paletteid;
-
 
 }
 

@@ -1,4 +1,6 @@
 let contentCsv = "Cold-Warm,Wet-Dry,Passive-Active,Dull-Bright,Sugary-Bitter,Mild-Acid,Silent-Noisy,Harsh-Harmonious,H1,S1,B1,H2,S2,B2,H3,S3,B3,H4,S4,B4\n";
+let paletteCpt=0;
+document.getElementById("cpt-palette").innerHTML=paletteCpt;
 
     document.getElementById("next").addEventListener("click", () => {
       const sliders = [
@@ -30,12 +32,15 @@ let contentCsv = "Cold-Warm,Wet-Dry,Passive-Active,Dull-Bright,Sugary-Bitter,Mil
       contentCsv += `\n`;
 
       setup();
+      paletteCpt++;
+      document.getElementById("cpt-palette").innerHTML=paletteCpt;
 
       a.click();
   });
 
   document.getElementById("export").addEventListener("click", () =>{
-    paletteid=-1;
+
+    paletteCpt=0;
     const sliders = [
       {label: "Cold-Warm", value: (document.getElementById("coldWarm").value/100).toFixed(2)},
       {label: "Wet-Dry", value: (document.getElementById("wetDry").value/100).toFixed(2)},
@@ -65,6 +70,7 @@ let contentCsv = "Cold-Warm,Wet-Dry,Passive-Active,Dull-Bright,Sugary-Bitter,Mil
     contentCsv += `\n`;
 
     setup();
+    document.getElementById("cpt-palette").innerHTML=paletteCpt;
 
     const file = new Blob([contentCsv], { type: "text/csv" });
       const a = document.createElement("a");
@@ -73,5 +79,6 @@ let contentCsv = "Cold-Warm,Wet-Dry,Passive-Active,Dull-Bright,Sugary-Bitter,Mil
       a.click();
 
   });
+
 
 
