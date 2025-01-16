@@ -31,44 +31,45 @@
             <button id="export">Export</button>
           </div>
           <p>Compteur de palette : <span id="cpt-palette"/></p>
-          <div id="color-mode-container">
-            <p>Mode de palettes</p>
-            <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
-            <label for="colorMode0">Random</label>
-  
-            <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
-            <label for="colorMode1">Monochromatic</label>
-            
-            <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
-            <label for="colorMode2">Complementary</label>
-  
-            <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
-            <label for="colorMode3">Triadic</label>
-  
-            <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
-            <label for="colorMode4">Tetradic</label>
-  
-            <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
-            <label for="colorMode5">Double Complementary</label>
-          </div>
+        </div>
+      <div id="palette-container">
+        <div id="palette"></div>
         
-          <div id="color-mode-container">
+        <div id="color-mode-container">
+          <p>Mode de palettes</p>
+          <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
+          <label for="colorMode0">Random</label>
+
+          <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
+          <label for="colorMode1">Monochromatic</label>
+          
+          <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
+          <label for="colorMode2">Complementary</label>
+
+          <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
+          <label for="colorMode3">Triadic</label>
+
+          <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
+          <label for="colorMode4">Tetradic</label>
+
+          <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
+          <label for="colorMode5">Double Complementary</label>
+        </div>
+        
+        <div id="color-mode-container">
             <p>Mode de palettes</p>
             <input type="radio" id="formeMode0" name="formes" value=0 checked onclick="setup()"/>
             <label for="formeMode0">Random size</label>
-  
+
             <input type="radio" id="formeMode1" name="formes" value=1 onclick="setup()"/>
             <label for="formeMode1">Same size</label>
             
             <input type="radio" id="formeMode2" name="formes" value=2 onclick="setup()"/>
             <label for="formeMode2">Square</label>
-          </div>
         </div>
-      <div id="palette-container">
-        <div id="palette"></div>
-        
 
         <div id="concepts-container">
+        <p>Which concepts best apply to this palette : </p>
         <p>Which concepts best apply to this palette ? </p>
         
 
@@ -146,7 +147,7 @@
   <script src="../JS/p5.sound.min.js"></script>
   <script src="../JS/p5.js"></script>
   <script src="../JS/slider.js"></script>
-  <script src="../JS/palette-generator.js"></script>
+  <script src="../JS/palette-generatorPopo.js"></script>
 </body>
 
 </html>

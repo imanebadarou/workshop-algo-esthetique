@@ -15,7 +15,7 @@ let colorPalette=[];
 
 function palette(modeCouleur,modeForme){  
     colorPalette=[];
-    
+
     let hue0 = random(0, 360);
     let sat0 = random(50, 100);
     let light0 = random(30, 100); 

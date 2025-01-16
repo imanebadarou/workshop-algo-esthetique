@@ -9,13 +9,11 @@ function resetTousCurseurs() {
   document.getElementById("harshHarmoni").value=50;
 }
 
-let paletteid = -1;
+// let paletteid = -1;
 let colorPalette=[];
 
-function palette(modeCouleur,modeForme, width, height){  
+function palette(modeCouleur, modeForme, width, height){  
     colorPalette=[];
-    
-    
 
     let hue0 = random(0, 360);
     let sat0 = random(50, 100);
@@ -23,43 +21,38 @@ function palette(modeCouleur,modeForme, width, height){
     let baseColor = color(hue0,sat0,light0);
   
     switch (modeCouleur) {
-        case 0:
+      case 0:          
           colorPalette = generateRandom();
-        break;
-        case 1:
-            colorPalette = generateMonochromatic(baseColor);
-        break;
-        case 2:
-            colorPalette = generateComplementary(baseColor);
-        break;
-        case 3:
-            colorPalette = generateTriadic(baseColor);
-        break;
-        case 4:
-            colorPalette = generateTetradic(baseColor);
-        break;
-        case 5:
-            colorPalette = generateAdjacentTriadic(baseColor);
-        break;
-      }
-
-      switch (modeForme) {
-        case 0:
-          colorPalette = generateRectRand(colorPalette);
-        break;
-        case 1:
-            colorPalette = generateRectNorm(colorPalette);
-        break;
-        case 2:
-            colorPalette = generateCarre(colorPalette);
-        break;
-      }
-
-      
-
+      break;
+      case 1:
+          colorPalette = generateMonochromatic(baseColor);
+      break;
+      case 2:
+          colorPalette = generateComplementary(baseColor);
+      break;
+      case 3:
+          colorPalette = generateTriadic(baseColor);
+      break;
+      case 4:
+          colorPalette = generateTetradic(baseColor);
+      break;
+      case 5:
+          colorPalette = generateAdjacentTriadic(baseColor);
+      break;
     }
-  
-  
+    switch (modeForme) {
+      case 0:
+        colorPalette = generateRectRand(colorPalette);
+      break;
+      case 1:
+          colorPalette = generateRectNorm(colorPalette);
+      break;
+      case 2:
+          colorPalette = generateCarre(colorPalette);
+      break;
+    }
+}
+
 function generateRectRand (colorPalette){
   let x = 0;
   let nbRect = 4;
@@ -78,44 +71,45 @@ function generateRectRand (colorPalette){
       fill(colorPalette[i]);
       noStroke();
       rect(x, 0, widthRdm, height);
+      
       x += widthRdm;
   }
 }
 
 function generateRectNorm (colorPalette){
-  let x = 0;
-  let nbRect = 4;
-  let widthRdm = width/nbRect;
-  for (let i = 0; i < nbRect; i++) {
-      fill(colorPalette[i]);
-      noStroke();
-      rect(x, 0, widthRdm, height);
-      x += widthRdm;
-  }
+let x = 0;
+let nbRect = 4;
+let widthRdm = width/nbRect;
+for (let i = 0; i < nbRect; i++) {
+    fill(colorPalette[i]);
+    noStroke();
+    rect(x, 0, widthRdm, height);
+    x += widthRdm;
+}
 }
 
 function generateCarre (colorPalette){
-  let x = 0;
-  let y = 0;
-  let nbRect = 4;
-  let widthRdm = width;
-  // let heightRdm = width;
-  for (let i = 0; i < nbRect; i++) {
-      fill(colorPalette[i]);
-      noStroke();
-      square(x, y, widthRdm,20);
-      widthRdm=widthRdm*0.75;
-      x = (width-widthRdm)/2;
-      y = (width-widthRdm)/2;
-  }
+let x = 0;
+let y = 0;
+let nbRect = 4;
+let widthRdm = width;
+// let heightRdm = width;
+for (let i = 0; i < nbRect; i++) {
+    fill(colorPalette[i]);
+    noStroke();
+    square(x, y, widthRdm,20);
+    widthRdm=widthRdm*0.75;
+    x = (width-widthRdm)/2;
+    y = (width-widthRdm)/2;
+}
 }
 
 function generateRandom(){
-  let palette = [];
-  for (let i = 0; i < 4; i++) {
-    palette.push(color(random(0, 360), sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));
-  }
-  return palette;
+let palette = [];
+for (let i = 0; i < 4; i++) {
+  palette.push(color(random(0, 360), sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));
+}
+return palette;
 }
 
 
@@ -203,11 +197,13 @@ function setup() {
     }
   }
   
+  
   palette(modeCouleur, modeForme, width, height);
   resetTousCurseurs();
 //   generatepalette(width, height)
-  paletteid++;
-  document.getElementById("cpt-palette").innerHTML=paletteid;
+
+  // paletteid++;
+  // document.getElementById("cpt-palette").innerHTML=paletteid;
 
 
 }
