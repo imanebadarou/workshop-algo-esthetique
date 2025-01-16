@@ -26,11 +26,11 @@
 }
 
 :root {
-  --medium-blue: #2F2A85;
+  --medium-blue: #333953;
   --dark-blue: #1B184E;
   --white-grey: #ECECF9;
   --light-grey: #B3B3B3;
-  --focus-blue: #4D45DB;
+  --focus-blue: #292929;
 
   --content-max-width: 1344px;
   font-size: 20px;
@@ -92,7 +92,7 @@ h1 {
   font-weight: normal;
   font-size: 2.4rem;
   text-transform: uppercase;
-  margin: 1rem 0 0 0;
+  margin: 0 0 1.5rem 0;
 }
 
 main>p,

@@ -1,21 +1,13 @@
     document.querySelector("button").addEventListener("click", () => {
       const sliders = [
-        {label: "Cold", value: (document.getElementById("coldWarm").value/100).toFixed(2)},
-        {label: "Warm", value: (1-(document.getElementById("coldWarm").value/100)).toFixed(2)},
-        {label: "Wet", value: (document.getElementById("wetDry").value/100).toFixed(2)},
-        {label: "Dry", value: (1-(document.getElementById("wetDry").value/100)).toFixed(2)},
-        {label: "Passive", value: (document.getElementById("passAct").value/100).toFixed(2)},
-        {label: "Active", value: (1-(document.getElementById("passAct").value/100)).toFixed(2)},
-        {label: "Dull", value: (document.getElementById("dullBright").value/100).toFixed(2)},
-        {label: "Bright", value: (1-(document.getElementById("dullBright").value/100)).toFixed(2)},
-        {label: "Sugary", value: (document.getElementById("SugarBitter").value/100).toFixed(2)},
-        {label: "Bitter", value: (1-(document.getElementById("SugarBitter").value/100)).toFixed(2)},
-        {label: "Mild", value: (document.getElementById("mildAcid").value/100).toFixed(2)},
-        {label: "Acid", value: (1-(document.getElementById("mildAcid").value/100)).toFixed(2)},
-        {label: "Silent", value: (document.getElementById("silentNoisy").value/100).toFixed(2)},
-        {label: "Noisy", value: (1-(document.getElementById("silentNoisy").value/100)).toFixed(2)},
-        {label: "Harsh", value: (document.getElementById("harshHarmoni").value/100).toFixed(2)},
-        {label: "Harmonious", value: (1-(document.getElementById("harshHarmoni").value/100)).toFixed(2)},
+        {label: "Cold-Warm", value: (document.getElementById("coldWarm").value/100).toFixed(2)},
+        {label: "Wet-Dry", value: (document.getElementById("wetDry").value/100).toFixed(2)},
+        {label: "Passive-Active", value: (document.getElementById("passAct").value/100).toFixed(2)},
+        {label: "Dull-Bright", value: (document.getElementById("dullBright").value/100).toFixed(2)},
+        {label: "Sugary-Bitter", value: (document.getElementById("SugarBitter").value/100).toFixed(2)},
+        {label: "Mild-Acid", value: (document.getElementById("mildAcid").value/100).toFixed(2)},
+        {label: "Silent-Noisy", value: (document.getElementById("silentNoisy").value/100).toFixed(2)},
+        {label: "Harsh-Harmonious", value: (document.getElementById("harshHarmoni").value/100).toFixed(2)},
       ];
 
 
@@ -24,7 +16,7 @@
         contentCsv += `${slider.label},${slider.value}\n`;
       });
 
-      contentCsv+="\nassocié à :\n ,H,S,L\n";
+      contentCsv+="\nassocié à :\n ,H,S,B\n";
 
       colorPalette.forEach((color) => {
         // Utiliser les fonctions de p5.js pour récupérer les composants HSB de la couleur

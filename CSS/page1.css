@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 0 1rem 2rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
     align-items: center;
 }
 
@@ -11,27 +11,49 @@
     font-weight: bold;
 }
 
-img {
-    max-height: 116px;   
-}
-
 canvas {
-    max-width: 200px;
+    max-width: 250px;
+    max-height: 250px;
     object-fit: contain;
 }
 
 @media screen and (min-width: 480px) {
-    article img {
-        max-height: 256px;
-    }
 
     canvas{
-        max-width: 400px;
+        max-width: 450px;
+        max-height: 450px;
     }
 
     #main-content-web {
         font-size: 1.6rem;
     }
+    #palette-container{
+        flex-direction: row;
+        align-items: start;
+    }
+}
+
+#bouttons{
+    display: flex;
+    column-gap: 5vw;
+}
+
+#bouttons button{
+    margin-top: 2vh;
+    font-family:"Louis George Cafe" ;
+    font-weight: bold;
+    padding: 2%;
+    font-size: 1rem;
+    border-radius: 10px;
+    color:white;
+    background-color:var(--focus-blue);
+    cursor: pointer;
+}
+
+#palette-titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #palette{
@@ -47,37 +69,31 @@ canvas {
     align-items: center;
 }
 
-#palette-container{
+.palette-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    column-gap: 5vw;
 }
 
-#palette-container p{
+.palette-container p{
     margin-bottom: 5%;
 }
 
-#palette-container button{
-    margin-top: 2vh;
-    font-family:"Louis George Cafe" ;
-    font-weight: bold;
-    padding: 2%;
-    font-size: 1rem;
-    border-radius: 10px;
-    color:white;
-    background-color:var(--focus-blue);
-    cursor: pointer;
-}
+
 
 
 .slider-container{
+    display: grid;
+    grid-template-columns: 10vw 35vw 10vw;
     margin-bottom: 5%;
+    align-items: center;
 }
 
 
 input[type="range"] {
     appearance: none;
-    width: 40vw; 
+    width: 30vw; 
     height: 0.5vh;
     background: black;
   }
