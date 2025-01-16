@@ -2,6 +2,7 @@ let paletteid = 0;
 let colorPalette=[];
 
 function palette(modeCouleur, width, height){  
+    colorPalette=[];
     let nbRect = 4;
     let widthRestant = width;
     let x = 0;
@@ -13,20 +14,23 @@ function palette(modeCouleur, width, height){
   
     switch (modeCouleur) {
         case 0:
-            colorPalette = generateMonochromatic(baseColor);
-          break;
+          colorPalette = generateAdjacentTriadic(baseColor);
+        break;
         case 1:
-            colorPalette = generateComplementary(baseColor);
-          break;
+            colorPalette = generateMonochromatic(baseColor);
+        break;
         case 2:
-            colorPalette = generateTriadic(baseColor);
-          break;
+            colorPalette = generateComplementary(baseColor);
+        break;
         case 3:
-            colorPalette = generateTetradic(baseColor);
-          break;
+            colorPalette = generateTriadic(baseColor);
+        break;
         case 4:
+            colorPalette = generateTetradic(baseColor);
+        break;
+        case 5:
             colorPalette = generateAdjacentTriadic(baseColor);
-          break;
+        break;
       }
 
     for (let i = 0; i < nbRect; i++) {
@@ -111,8 +115,19 @@ function setup() {
   background(255);
   colorMode(HSB, 360,100,100);
 
-  modeCouleur = document.querySelector("input[type='radio'][name=couleurs]:checked").value;
-  console.log(modeCouleur); 
+  // modeCouleur = document.querySelector("input[type='radio'][name=couleurs]:checked").value;
+  // console.log(modeCouleur); 
+
+  // const colors = document.getElementsByName('couleurs');
+  // modeCouleur;
+  // for(var i = 0; i < colors.length; i++){
+  //     if(colors[i].checked){
+        
+  //       console.log(colors[i].value);
+  //       modeCouleur = colors[i].value;
+  //     }
+  //   }
+  //   console.log(modeCouleur);
   
   palette(modeCouleur, width, height);
 //   generatepalette(width, height)

@@ -1,1 +1,0 @@
-document.querySelector("input[type='radio'][name=couleurs]:checked").value;
