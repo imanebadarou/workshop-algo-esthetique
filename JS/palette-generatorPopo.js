@@ -35,7 +35,7 @@ function palette(width, height){
         let widthRdm;
         
         if (i < nbRect - 1) {
-        widthRdm = random(50, (widthRestant / (nbRect - i))*1.5);
+        widthRdm = random(50, (widthRestant / (nbRect - i))*1.4);
         } else {
         widthRdm = widthRestant;
         }
@@ -105,8 +105,8 @@ function generateAdjacentTriadic(baseColor) {
 
 
 function setup() {
-  let width = 250;
-  let height = 250;
+  let width = 400;
+  let height = 400;
   let canvas = createCanvas(width, height);
   canvas.parent('palette');
   background(255);

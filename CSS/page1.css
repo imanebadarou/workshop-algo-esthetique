@@ -12,12 +12,21 @@
 }
 
 img {
-    max-height: 116px;
+    max-height: 116px;   
+}
+
+canvas {
+    max-width: 200px;
+    object-fit: contain;
 }
 
 @media screen and (min-width: 480px) {
     article img {
         max-height: 256px;
+    }
+
+    canvas{
+        max-width: 400px;
     }
 
     #main-content-web {
@@ -67,19 +76,19 @@ img {
 
 
 input[type="range"] {
-    -webkit-appearance: none;
+    appearance: none;
     width: 40vw; 
     height: 0.5vh;
     background: black;
   }
   
   
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 2.5vw;
-    height:2.5vh;
-    background: black;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+input[type="range"]::-webkit-slider-thumb {
+appearance: none;
+width: 2.5vw;
+height:2.5vh;
+background: black;
+border-radius: 10px;
+cursor: pointer;
+}
   
