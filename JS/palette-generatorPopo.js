@@ -9,6 +9,7 @@ function resetTousCurseurs() {
   document.getElementById("harshHarmoni").value=50;
 }
 
+let paletteid = -1;
 let colorPalette=[];
 
 function palette(modeCouleur,modeForme, width, height){  
@@ -59,26 +60,26 @@ function palette(modeCouleur,modeForme, width, height){
     }
   
   
-  function generateRectRand (colorPalette){
-    let x = 0;
-    let nbRect = 4;
-    let widthRestant = width;
-    for (let i = 0; i < nbRect; i++) {
-        let widthRdm;
-        
-        if (i < nbRect - 1) {
-        widthRdm = random(50, (widthRestant / (nbRect - i))*1.4);
-        } else {
-        widthRdm = widthRestant;
-        }
-        
-        widthRestant -= widthRdm;
-  
-        fill(colorPalette[i]);
-        noStroke();
-        rect(x, 0, widthRdm, height);
-        x += widthRdm;
-    }
+function generateRectRand (colorPalette){
+  let x = 0;
+  let nbRect = 4;
+  let widthRestant = width;
+  for (let i = 0; i < nbRect; i++) {
+      let widthRdm;
+      
+      if (i < nbRect - 1) {
+      widthRdm = random(50, (widthRestant / (nbRect - i))*1.4);
+      } else {
+      widthRdm = widthRestant;
+      }
+      
+      widthRestant -= widthRdm;
+
+      fill(colorPalette[i]);
+      noStroke();
+      rect(x, 0, widthRdm, height);
+      x += widthRdm;
+  }
 }
 
 function generateRectNorm (colorPalette){
@@ -205,6 +206,9 @@ function setup() {
   palette(modeCouleur, modeForme, width, height);
   resetTousCurseurs();
 //   generatepalette(width, height)
+  paletteid++;
+  document.getElementById("cpt-palette").innerHTML=paletteid;
+
 
 }
 
