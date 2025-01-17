@@ -117,8 +117,8 @@ function generateMonochromatic(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     for (let i = 0; i < 4; i++) {
-      let saturationValue = 100 - (i * 25);  // Diminuer la saturation
-      let brightnessValue = 100 - (i * 20);  // Diminuer la luminosité
+      let saturationValue = 100 - (i * 25);  
+      let brightnessValue = 100 - (i * 20);  
       palette.push(color(baseHue, saturationValue, brightnessValue ));
       
     }
@@ -129,9 +129,9 @@ function generateComplementary(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     palette.push(baseColor);
-    palette.push(color((baseHue + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur complémentaire
-    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));   // Couleur complémentaire adjacente
-    palette.push(color((baseHue + 180 + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Autre couleur complémentaire adjacente
+    palette.push(color((baseHue + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
+    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));   
+    palette.push(color((baseHue + 180 + random(-20,20)) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100)); 
     return palette;
 }
 
@@ -139,10 +139,10 @@ function generateTriadic(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     let basesat = saturation(baseColor);
-    palette.push(color(baseHue, basesat, random(90, 100)));  // Ajout d'une couleur complémentaire
+    palette.push(color(baseHue, basesat, random(90, 100)));  
     palette.push(baseColor);
-    palette.push(color((baseHue + 135) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 120° (triadique)
-    palette.push(color((baseHue + 225) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 240° (triadique)
+    palette.push(color((baseHue + 135) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
+    palette.push(color((baseHue + 225) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
     return palette;
 }
 
@@ -150,19 +150,19 @@ function generateTetradic(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
     palette.push(baseColor);
-    palette.push(color((baseHue + 45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 120° (triadique)
-    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 240° (triadique)
-    palette.push(color((baseHue + 180+45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Ajout d'une couleur complémentaire
+    palette.push(color((baseHue + 45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
+    palette.push(color((baseHue + 180) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
+    palette.push(color((baseHue + 180+45) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
     return palette;
 }
 
 function generateAdjacentTriadic(baseColor) {
     let palette = [];
     let baseHue = hue(baseColor);
-    palette.push(color(baseHue, random(10, 40), random(90, 100)));  // Ajout d'une quatrième couleur (plus éloignée)
+    palette.push(color(baseHue, random(10, 40), random(90, 100)));  
     palette.push(baseColor);
-    palette.push(color((baseHue + 30) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de 30° (adjacente)
-    palette.push(color((baseHue - 30 + 360) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  // Couleur décalée de -30° (adjacente)
+    palette.push(color((baseHue + 30) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
+    palette.push(color((baseHue - 30 + 360) % 360, sqrt(random(0, 1))*100, sqrt(random(0, 1))*100));  
     return palette;
 }
 
@@ -176,9 +176,6 @@ function setup() {
   canvas.parent('palette');
   background(255);
   colorMode(HSB, 360,100,100);
-
-  // modeCouleur = document.querySelector("input[type='radio'][name=couleurs]:checked").value;
-  // console.log(modeCouleur); 
 
   const colors = document.getElementsByName('couleurs');
   for(var i = 0; i < colors.length; i++){
@@ -196,21 +193,14 @@ function setup() {
       modeForme = parseInt(forms[i].value);
     }
   }
-  
-  
-  palette(0, modeForme, width, height);
+    
+  palette(modeCouleur, modeForme, width, height);
   resetTousCurseurs();
-  //generatepalette(0, modeForme,width, height);
-
-  // paletteid++;
-  // document.getElementById("cpt-palette").innerHTML=paletteid;
-
-
 }
 
 function generatepalette(modeCouleur, modeForme,width, height) {
   for (let i = 0; i < 30; i++) {
-    palette(0, modeForme, width, height);
+    palette(modeCouleur, modeForme, width, height);
 
     let fileName = `palette_${nf(i, 3)}.png`;
     saveCanvas(fileName);

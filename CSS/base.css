@@ -103,8 +103,6 @@ main>h1 {
 footer {
   background-color: var(--medium-blue);
   color: var(--white-grey);
-  /* display: flex;
-  justify-content: center; */
   text-align: center;
   height: 20vh;
   padding: 4vh 10vw;

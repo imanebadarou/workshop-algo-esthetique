@@ -155,9 +155,9 @@ font-size: 1.2rem;
 }
 
 #color-mode-container input {
-    /* -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none; */
+    appearance: none;
   
     border-radius: 50%;
     width: 16px;
@@ -171,9 +171,9 @@ font-size: 1.2rem;
     top: 4px;
 }
 #form-mode-container input {
-    /* -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none; */
+    appearance: none;
   
     border-radius: 50%;
     width: 16px;
@@ -187,7 +187,10 @@ font-size: 1.2rem;
     top: 4px;
 }
 
-input:checked {
+#form-mode-container input:checked {
+border: 6px solid #999;
+}
+#color-mode-container input:checked {
 border: 6px solid #999;
 }
 
@@ -216,8 +219,4 @@ border: 6px solid #999;
         align-items:center;
         justify-content: center;
     }
-    /* #palette-container{
-        flex-direction: row;
-        align-items: start;
-    } */
 } 
