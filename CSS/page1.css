@@ -38,10 +38,11 @@ canvas {
 
 #bouttons{
     display: flex;
-    width: max-content;
+    column-gap: 4vw;
 }
 
 #bouttons button{
+    width: 8vw;
     margin-top: 2vh;
     font-family:"Louis George Cafe" ;
     font-weight: bold;
