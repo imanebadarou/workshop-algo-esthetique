@@ -35,7 +35,6 @@ document.getElementById("cpt-palette").innerHTML=paletteCpt;
       paletteCpt++;
       document.getElementById("cpt-palette").innerHTML=paletteCpt;
 
-      a.click();
   });
 
   document.getElementById("export").addEventListener("click", () =>{
