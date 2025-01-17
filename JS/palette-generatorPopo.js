@@ -10,7 +10,7 @@ function resetTousCurseurs() {
   document.getElementById("harshHarmoni").value=50;
 }
 
-// let paletteid = -1;
+let paletteid = 0;
 
 function palette(modeCouleur, modeForme, width, height){  
     colorPalette=[];
@@ -171,7 +171,7 @@ function setup() {
   let width = 450;
   let height = 450;
   let canvas = createCanvas(width, height);
-  let modeCouleur=0;
+  let modeCouleur=1;
   let modeForme=0;
   canvas.parent('palette');
   background(255);
@@ -198,9 +198,9 @@ function setup() {
   }
   
   
-  palette(modeCouleur, modeForme, width, height);
+  palette(0, modeForme, width, height);
   resetTousCurseurs();
-//   generatepalette(width, height)
+  //generatepalette(0, modeForme,width, height);
 
   // paletteid++;
   // document.getElementById("cpt-palette").innerHTML=paletteid;
@@ -208,14 +208,13 @@ function setup() {
 
 }
 
-function generatepalette(width, height) {
-  for (let i = 0; i < 200; i++) {
-    palette(width, height);
+function generatepalette(modeCouleur, modeForme,width, height) {
+  for (let i = 0; i < 30; i++) {
+    palette(0, modeForme, width, height);
 
-    let fileName = `palette_${nf(paletteid, 3)}.png`;
+    let fileName = `palette_${nf(i, 3)}.png`;
     saveCanvas(fileName);
 
-    paletteid++;
     clear();
     background(255);
   }
