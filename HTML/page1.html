@@ -13,7 +13,7 @@
   <header>
     <nav>
       <a href="page1.html" title="Retour à l'accueil du site">
-        <img src="../IMG/LOGOS/palette.jpg" alt="Retour à l'accueil du site" />
+        <img src="../IMG/LOGOS/paletteLogo.png" alt="Retour à l'accueil du site" />
       </a>
       <ul>
         <li><a href="page1.html">Color Annotator</a></li>
@@ -25,55 +25,69 @@
       <div id="palette-container">
         <div id="palette-titre">
           <h1>Palette</h1>
-          <p id="titre-cpt">Compteur de palette : <span id="cpt-palette"/></p>
+          <p id="titre-cpt">Palette counter : <span id="cpt-palette"/></p>
           <div id="palette"></div>
           <div id="bouttons">
-            <button id="next">Next</button>
-            <button id="export">Export</button>
+            <div>
+              <button id="next">Next</button>
+            </div>
+            <div>
+              <button id="export">Export</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div id="evaluation-container">
         <div id="mode-container">
-          <div class="color-mode-container">
-            <p class="titre-mode">Mode de couleurs :</p>
-            <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
-            <label for="colorMode0">Random</label>
+          <div id="color-mode-container">
+            <p class="titre-mode">Color mode :</p>
+            <div>
+              <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
+              <label for="colorMode0">Random</label>
 
-            <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
-            <label for="colorMode1">Monochromatic</label>
+              <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
+              <label for="colorMode1">Monochromatic</label>
+            </div>
+              
+            <div>
+              <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
+              <label for="colorMode2">Complementary</label>
+
+              <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
+              <label for="colorMode3">Triadic</label>
+            </div>
             
-            <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
-            <label for="colorMode2">Complementary</label>
+            <div>
+              <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
+              <label for="colorMode4">Tetradic</label>
 
-            <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
-            <label for="colorMode3">Triadic</label>
-
-            <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
-            <label for="colorMode4">Tetradic</label>
-
-            <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
-            <label for="colorMode5">Adjacent Color</label>
+              <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
+              <label for="colorMode5">Adjacent Color</label>
+            </div>
           </div>
           
-          <div class="color-mode-container">
-              <p class="titre-mode">Mode de formes :</p>
+          <div id="form-mode-container">
+            <p class="titre-mode">Form mode :</p>
+            <div>
               <input type="radio" id="formeMode0" name="formes" value=0 checked onclick="setup()"/>
               <label for="formeMode0">Random size</label>
-
+            </div>
+            <div>
               <input type="radio" id="formeMode1" name="formes" value=1 onclick="setup()"/>
               <label for="formeMode1">Same size</label>
-              
+            </div>
+            <div>
               <input type="radio" id="formeMode2" name="formes" value=2 onclick="setup()"/>
               <label for="formeMode2">Square</label>
+            </div>
           </div>
         </div>
 
         <div id="concepts-container">
-          <p>Which concepts best apply to this palette ? </p>
+          <p id="whichConcepts">Which concepts best apply to this palette ? </p>
           
-
+          <p>|</p>
           <div class="slider-container">
             <label class="text-left">Cold</label>
             <input type="range" id="coldWarm" min="0" max="100" value="50">
@@ -121,6 +135,7 @@
             <input type="range" id="harshHarmoni" min="0" max="100" value="50">
             <label class="text-right">Harsh</label>
           </div>
+          <p>|</p>
         </div>
       </div>
 

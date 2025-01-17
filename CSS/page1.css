@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 2rem 1rem 2rem 1rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     align-items: center;
 }
 
@@ -17,32 +19,14 @@ canvas {
     object-fit: contain;
 }
 
-@media screen and (min-width: 480px) {
-
-    canvas{
-        max-width: 450px;
-        max-height: 450px;
-    }
-
-    #main-content-web {
-        font-size: 1.6rem;
-        flex-direction: row;
-        align-items:start;
-        justify-content: center;
-    }
-    /* .palette-container{
-        flex-direction: row;
-        align-items: start;
-    }*/
-} 
-
 #bouttons{
     display: flex;
+    justify-content: space-around;
     column-gap: 4vw;
 }
 
 #bouttons button{
-    width: 8vw;
+    width: 100px;
     margin-top: 2vh;
     font-family:"Louis George Cafe" ;
     font-weight: bold;
@@ -57,6 +41,13 @@ canvas {
 
 #titre-cpt{
     font-size: 1.3rem;
+}
+#palette-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 5vw;
+    margin-left: 5vw;
 }
 
 #palette-titre{
@@ -83,18 +74,21 @@ canvas {
     align-items: center;
 }
 #concepts-container p{
-    margin-bottom: 3vh;
+    font-size: 1rem;
 }
 
-.palette-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    column-gap: 5vw;
+#concepts-container #whichConcepts{
+    margin-bottom: 2vh;
+    font-size: 1.3rem;
 }
+
 #mode-container{
-    display: grid;
-    grid-template-columns: 36vw 20vw;
+    display: flex;
+    max-width: 60vw;
+}
+
+#mode-container label{
+    font-size: 1rem;
 }
 
 .palette-container p{
@@ -113,10 +107,12 @@ canvas {
 
 .slider-container{
     display: grid;
-    grid-template-columns: 12vw 30vw 10vw;
-    margin-bottom: 3%;
+    grid-template-columns: 11vw 25vw 11vw;
+    margin:1.2% 0 1.5% 0;
     align-items: center;
+    font-size: 1.2rem;
 }
+
 
 .text-left{
     text-align: right;
@@ -130,14 +126,18 @@ canvas {
 
 input[type="range"] {
     appearance: none;
-    width: 30vw; 
-    height: 0.5vh;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25vw; 
+    height: 3px;
     background: black;
   }
   
   
 input[type="range"]::-webkit-slider-thumb {
 appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
 width: 2.5vw;
 height:2.5vh;
 background: black;
@@ -145,12 +145,13 @@ border-radius: 10px;
 cursor: pointer;
 }
 
-.color-mode-container{
+#mode-container{
 margin: 0 0 5vh 0;
+padding-left: 10px;
 font-size: 1.2rem;
 }
 
-.color-mode-container input {
+#color-mode-container input {
     /* -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; */
@@ -163,11 +164,58 @@ font-size: 1.2rem;
     transition: 0.2s all linear;
     margin-right: 5px;
   
-    position: relative;
+    position:sticky;
+    top: 4px;
+}
+#form-mode-container input {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position:sticky;
     top: 4px;
 }
 
 input:checked {
-border: 6px solid black;
+border: 6px solid #999;
 }
+
+#color-mode-container{
+    width: 20vw;
+    margin: 0 2vw 0 5vw;
+}
+#form-mode-container{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+
+
   
+
+@media screen and (min-width: 600px) {
+
+    canvas{
+        max-width: 450px;
+        max-height: 450px;
+    }
+
+    #main-content-web {
+        font-size: 1.3rem;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+    }
+    /* #palette-container{
+        flex-direction: row;
+        align-items: start;
+    } */
+} 
