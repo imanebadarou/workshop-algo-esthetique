@@ -33,30 +33,40 @@ canvas {
     /* .palette-container{
         flex-direction: row;
         align-items: start;
-    }
-} */
+    }*/
+} 
 
 #bouttons{
     display: flex;
-    column-gap: 5vw;
+    width: max-content;
 }
 
 #bouttons button{
     margin-top: 2vh;
     font-family:"Louis George Cafe" ;
     font-weight: bold;
-    padding: 2%;
-    font-size: 1rem;
+    padding: 4%;
+    font-size: 1.3rem;
     border-radius: 10px;
+    border: solid var(--dark-blue) 2px;
     color:white;
-    background-color:var(--focus-blue);
+    background-color:var(--medium-blue);
     cursor: pointer;
+}
+
+#titre-cpt{
+    font-size: 1.3rem;
 }
 
 #palette-titre{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.titre-mode{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #palette{
@@ -71,12 +81,19 @@ canvas {
     flex-direction: column;
     align-items: center;
 }
+#concepts-container p{
+    margin-bottom: 3vh;
+}
 
 .palette-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     column-gap: 5vw;
+}
+#mode-container{
+    display: grid;
+    grid-template-columns: 36vw 20vw;
 }
 
 .palette-container p{
@@ -95,9 +112,18 @@ canvas {
 
 .slider-container{
     display: grid;
-    grid-template-columns: 10vw 35vw 10vw;
-    margin-bottom: 5%;
+    grid-template-columns: 12vw 30vw 10vw;
+    margin-bottom: 3%;
     align-items: center;
+}
+
+.text-left{
+    text-align: right;
+    margin-right: 2vw;
+}
+.text-right{
+    text-align: left;
+    margin-left: 2vw;
 }
 
 
@@ -118,12 +144,12 @@ border-radius: 10px;
 cursor: pointer;
 }
 
-#color-mode-container{
-margin: 10px;
+.color-mode-container{
+margin: 0 0 5vh 0;
 font-size: 1.2rem;
 }
 
-#color-mode-container input {
+.color-mode-container input {
     /* -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; */

@@ -11,7 +11,7 @@ document.getElementById("cpt-palette").innerHTML=paletteCpt;
         {label: "Sugary-Bitter", value: (document.getElementById("SugarBitter").value/100).toFixed(2)},
         {label: "Mild-Acid", value: (document.getElementById("mildAcid").value/100).toFixed(2)},
         {label: "Silent-Noisy", value: (document.getElementById("silentNoisy").value/100).toFixed(2)},
-        {label: "Harsh-Harmonious", value: (document.getElementById("harshHarmoni").value/100).toFixed(2)},
+        {label: "Harmonious-Harsh", value: (document.getElementById("harshHarmoni").value/100).toFixed(2)},
       ];
       
       sliders.forEach(slider => {

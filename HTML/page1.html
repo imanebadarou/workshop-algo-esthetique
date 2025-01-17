@@ -25,47 +25,49 @@
       <div id="palette-container">
         <div id="palette-titre">
           <h1>Palette</h1>
+          <p id="titre-cpt">Compteur de palette : <span id="cpt-palette"/></p>
           <div id="palette"></div>
           <div id="bouttons">
             <button id="next">Next</button>
             <button id="export">Export</button>
           </div>
-          <p>Compteur de palette : <span id="cpt-palette"/></p>
         </div>
       </div>
 
       <div id="evaluation-container">
-        <div id="color-mode-container">
-          <p>Mode de palettes</p>
-          <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
-          <label for="colorMode0">Random</label>
+        <div id="mode-container">
+          <div class="color-mode-container">
+            <p class="titre-mode">Mode de couleurs :</p>
+            <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
+            <label for="colorMode0">Random</label>
 
-          <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
-          <label for="colorMode1">Monochromatic</label>
-          
-          <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
-          <label for="colorMode2">Complementary</label>
-
-          <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
-          <label for="colorMode3">Triadic</label>
-
-          <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
-          <label for="colorMode4">Tetradic</label>
-
-          <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
-          <label for="colorMode5">Double Complementary</label>
-        </div>
-        
-        <div id="color-mode-container">
-            <p>Mode de palettes</p>
-            <input type="radio" id="formeMode0" name="formes" value=0 checked onclick="setup()"/>
-            <label for="formeMode0">Random size</label>
-
-            <input type="radio" id="formeMode1" name="formes" value=1 onclick="setup()"/>
-            <label for="formeMode1">Same size</label>
+            <input type="radio" id="colorMode1" name="couleurs" value=1 onclick="setup()"/>
+            <label for="colorMode1">Monochromatic</label>
             
-            <input type="radio" id="formeMode2" name="formes" value=2 onclick="setup()"/>
-            <label for="formeMode2">Square</label>
+            <input type="radio" id="colorMode2" name="couleurs" value=2 onclick="setup()"/>
+            <label for="colorMode2">Complementary</label>
+
+            <input type="radio" id="colorMode3" name="couleurs" value=3 onclick="setup()"/>
+            <label for="colorMode3">Triadic</label>
+
+            <input type="radio" id="colorMode4" name="couleurs" value=4 onclick="setup()"/>
+            <label for="colorMode4">Tetradic</label>
+
+            <input type="radio" id="colorMode5" name="couleurs" value=5 onclick="setup()"/>
+            <label for="colorMode5">Adjacent Color</label>
+          </div>
+          
+          <div class="color-mode-container">
+              <p class="titre-mode">Mode de formes :</p>
+              <input type="radio" id="formeMode0" name="formes" value=0 checked onclick="setup()"/>
+              <label for="formeMode0">Random size</label>
+
+              <input type="radio" id="formeMode1" name="formes" value=1 onclick="setup()"/>
+              <label for="formeMode1">Same size</label>
+              
+              <input type="radio" id="formeMode2" name="formes" value=2 onclick="setup()"/>
+              <label for="formeMode2">Square</label>
+          </div>
         </div>
 
         <div id="concepts-container">
@@ -73,51 +75,51 @@
           
 
           <div class="slider-container">
-            <label>Cold</label>
+            <label class="text-left">Cold</label>
             <input type="range" id="coldWarm" min="0" max="100" value="50">
-            <label>Warm</label>
+            <label class="text-right">Warm</label>
           </div>
 
           <div class="slider-container">
-            <label>Wet</label>
+            <label class="text-left">Wet</label>
             <input type="range" id="wetDry" min="0" max="100" value="50">
-            <label>Dry</label>
+            <label class="text-right">Dry</label>
           </div>
 
           <div class="slider-container">
-            <label>Passive</label>
+            <label class="text-left">Passive</label>
             <input type="range" id="passAct" min="0" max="100" value="50">
-            <label>Active</label>
+            <label class="text-right">Active</label>
           </div>
 
           <div class="slider-container">
-            <label>Dull</label>
+            <label class="text-left">Dull</label>
             <input type="range" id="dullBright" min="0" max="100" value="50">
-            <label>Bright</label>
+            <label class="text-right">Bright</label>
           </div>
 
           <div class="slider-container">
-            <label>Sugary</label>
+            <label class="text-left">Sugary</label>
             <input type="range" id="SugarBitter" min="0" max="100" value="50">
-            <label>Bitter</label>
+            <label class="text-right">Bitter</label>
           </div>
 
           <div class="slider-container">
-            <label>Mild</label>
+            <label class="text-left">Mild</label>
             <input type="range" id="mildAcid" min="0" max="100" value="50">
-            <label>Acid</label>
+            <label class="text-right">Acid</label>
           </div>
 
           <div class="slider-container">
-            <label>Silent</label>
+            <label class="text-left">Silent</label>
             <input type="range" id="silentNoisy" min="0" max="100" value="50">
-            <label>Noisy</label>
+            <label class="text-right">Noisy</label>
           </div>
 
           <div class="slider-container">
-            <label>Harsh</label>
+            <label class="text-left">Harmonious</label>
             <input type="range" id="harshHarmoni" min="0" max="100" value="50">
-            <label>Harmonious</label>
+            <label class="text-right">Harsh</label>
           </div>
         </div>
       </div>
