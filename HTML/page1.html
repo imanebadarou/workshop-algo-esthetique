@@ -22,7 +22,7 @@
   </header>
   <main>
     <div id="main-content-web">
-      <div id="palette-container" class="palette-container">
+      <div id="palette-container">
         <div id="palette-titre">
           <h1>Palette</h1>
           <div id="palette"></div>
@@ -32,9 +32,9 @@
           </div>
           <p>Compteur de palette : <span id="cpt-palette"/></p>
         </div>
-      <div id="palette-container">
-        <div id="palette"></div>
-        
+      </div>
+
+      <div id="evaluation-container">
         <div id="color-mode-container">
           <p>Mode de palettes</p>
           <input type="radio" id="colorMode0" name="couleurs" value=0 checked onclick="setup()"/>
@@ -69,56 +69,56 @@
         </div>
 
         <div id="concepts-container">
-        <p>Which concepts best apply to this palette : </p>
-        <p>Which concepts best apply to this palette ? </p>
-        
+          <p>Which concepts best apply to this palette ? </p>
+          
 
-        <div class="slider-container">
-          <label>Cold</label>
-          <input type="range" id="coldWarm" min="0" max="100" value="50">
-          <label>Warm</label>
-        </div>
+          <div class="slider-container">
+            <label>Cold</label>
+            <input type="range" id="coldWarm" min="0" max="100" value="50">
+            <label>Warm</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Wet</label>
-          <input type="range" id="wetDry" min="0" max="100" value="50">
-          <label>Dry</label>
-        </div>
+          <div class="slider-container">
+            <label>Wet</label>
+            <input type="range" id="wetDry" min="0" max="100" value="50">
+            <label>Dry</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Passive</label>
-          <input type="range" id="passAct" min="0" max="100" value="50">
-          <label>Active</label>
-        </div>
+          <div class="slider-container">
+            <label>Passive</label>
+            <input type="range" id="passAct" min="0" max="100" value="50">
+            <label>Active</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Dull</label>
-          <input type="range" id="dullBright" min="0" max="100" value="50">
-          <label>Bright</label>
-        </div>
+          <div class="slider-container">
+            <label>Dull</label>
+            <input type="range" id="dullBright" min="0" max="100" value="50">
+            <label>Bright</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Sugary</label>
-          <input type="range" id="SugarBitter" min="0" max="100" value="50">
-          <label>Bitter</label>
-        </div>
+          <div class="slider-container">
+            <label>Sugary</label>
+            <input type="range" id="SugarBitter" min="0" max="100" value="50">
+            <label>Bitter</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Mild</label>
-          <input type="range" id="mildAcid" min="0" max="100" value="50">
-          <label>Acid</label>
-        </div>
+          <div class="slider-container">
+            <label>Mild</label>
+            <input type="range" id="mildAcid" min="0" max="100" value="50">
+            <label>Acid</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Silent</label>
-          <input type="range" id="silentNoisy" min="0" max="100" value="50">
-          <label>Noisy</label>
-        </div>
+          <div class="slider-container">
+            <label>Silent</label>
+            <input type="range" id="silentNoisy" min="0" max="100" value="50">
+            <label>Noisy</label>
+          </div>
 
-        <div class="slider-container">
-          <label>Harsh</label>
-          <input type="range" id="harshHarmoni" min="0" max="100" value="50">
-          <label>Harmonious</label>
+          <div class="slider-container">
+            <label>Harsh</label>
+            <input type="range" id="harshHarmoni" min="0" max="100" value="50">
+            <label>Harmonious</label>
+          </div>
         </div>
       </div>
 
@@ -146,8 +146,8 @@
 
   <script src="../JS/p5.sound.min.js"></script>
   <script src="../JS/p5.js"></script>
-  <script src="../JS/slider.js"></script>
   <script src="../JS/palette-generatorPopo.js"></script>
+  <script src="../JS/slider.js"></script>
 </body>
 
 </html>

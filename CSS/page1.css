@@ -26,12 +26,15 @@ canvas {
 
     #main-content-web {
         font-size: 1.6rem;
+        flex-direction: row;
+        align-items:start;
+        justify-content: center;
     }
-    #palette-container{
+    /* .palette-container{
         flex-direction: row;
         align-items: start;
     }
-}
+} */
 
 #bouttons{
     display: flex;
@@ -78,6 +81,13 @@ canvas {
 
 .palette-container p{
     margin-bottom: 5%;
+}
+
+.evaluation-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 5vw;
 }
 
 

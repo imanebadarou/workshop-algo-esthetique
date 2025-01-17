@@ -1,3 +1,4 @@
+let colorPalette=[];
 function resetTousCurseurs() {
   document.getElementById("coldWarm").value=50;
   document.getElementById("wetDry").value=50;
@@ -10,7 +11,6 @@ function resetTousCurseurs() {
 }
 
 // let paletteid = -1;
-let colorPalette=[];
 
 function palette(modeCouleur, modeForme, width, height){  
     colorPalette=[];
@@ -42,13 +42,13 @@ function palette(modeCouleur, modeForme, width, height){
     }
     switch (modeForme) {
       case 0:
-        colorPalette = generateRectRand(colorPalette);
+        generateRectRand(colorPalette);
       break;
       case 1:
-          colorPalette = generateRectNorm(colorPalette);
+        generateRectNorm(colorPalette);
       break;
       case 2:
-          colorPalette = generateCarre(colorPalette);
+        generateCarre(colorPalette);
       break;
     }
 }
