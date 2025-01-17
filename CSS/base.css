@@ -103,36 +103,22 @@ main>h1 {
 footer {
   background-color: var(--medium-blue);
   color: var(--white-grey);
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  height: 20vh;
+  padding: 4vh 10vw;
+  font-size: 0.9rem;
 }
 
 footer a {
   color: var(--white-grey);
 }
 
-#footer-content {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 4fr 6fr;
-  grid-template-areas:
-    'toute-ressemblance en-savoir-plus'
-    'copyright copyright';
-  column-gap: 1rem;
-  row-gap: 4rem;
-  margin: 2rem 1rem 2rem 1rem;
-  max-width: var(--content-max-width);
-}
-
-#toute-ressemblance {
-  grid-area: toute-ressemblance;
-}
-
-#en-savoir-plus-container {
-  grid-area: en-savoir-plus;
-}
 
 #copyright {
   grid-area: copyright;
   text-align: center;
+  margin-top: 4vh;
+  font-size: 0.6rem;
 }

@@ -48,6 +48,7 @@ canvas {
     align-items: center;
     column-gap: 5vw;
     margin-left: 5vw;
+    margin-bottom: 4.5vh;
 }
 
 #palette-titre{
@@ -82,13 +83,15 @@ canvas {
     font-size: 1.3rem;
 }
 
+
 #mode-container{
     display: flex;
+    justify-content: space-evenly;
     max-width: 60vw;
 }
 
 #mode-container label{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .palette-container p{
@@ -189,19 +192,18 @@ border: 6px solid #999;
 }
 
 #color-mode-container{
-    width: 20vw;
-    margin: 0 2vw 0 5vw;
+    max-width: 20vw;
 }
 #form-mode-container{
     display: flex;
     flex-direction: column;
-    width: 35vw;
+    max-width: 35vw;
 }
 
 
   
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 950px) {
 
     canvas{
         max-width: 450px;
